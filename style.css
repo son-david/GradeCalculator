@@ -1,0 +1,27 @@
+.item {
+  border: solid 1px black;
+  margin: 2px;
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.itemEnd {
+  clear: left;
+}
+
+.inside {
+  border: solid 1px blue;
+  display: inline-block;
+  margin: 2px;
+}
+
+.section {
+  border: solid 1px red;
+  display: block;
+  margin : 2px;
+}
+
+.input {
+  width : 50px;
+}
