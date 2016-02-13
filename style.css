@@ -4,24 +4,56 @@
   width: 100px;
   height: 100px;
   float: left;
+  display : inline-block;
 }
 
 .itemEnd {
   clear: left;
 }
 
-.inside {
-  border: solid 1px blue;
-  display: inline-block;
-  margin: 2px;
+.itemSection {
+  margin-right: 100px;
+  width : 600px;
+  margin :2px;
+}
+
+.totalSection {
+  display :inline-block;
+  position :absolute;
+  right : 0px;
+  top : 0px;
+  width : 100px;
 }
 
 .section {
-  border: solid 1px red;
   display: block;
   margin : 2px;
+  width : 700px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgrey;
+}
+
+.sectionButton {
+  position: absolute;
+  right :0px;
+  top:0px;
 }
 
 .input {
   width : 50px;
+}
+
+.container {
+  position : center;
+  margin-top: 100px;
+}
+
+#title {
+  position : relative;
+  width : 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }

@@ -32,9 +32,9 @@ angular.module('app',[])
           num += $scope.storage[i].data[j][0];
           denom += $scope.storage[i].data[j][1];
         }
-        
+
         $scope.storage[i].total = [num, denom];
-        $scope.storage[i].totalPercent = Math.round(num * 100/denom).toFixed(2);
+        $scope.storage[i].totalPercent = Math.round(num * 10000/denom)/100;
       }
 
       $scope.recalcFinal();
@@ -61,7 +61,7 @@ angular.module('app',[])
         denom += $scope.storage[i].total[1];
       }
       $scope.final.total = [num, denom];
-      $scope.final.totalPercent = Math.round(num * 100/denom).toFixed(2);
+      $scope.final.totalPercent = Math.round(num * 10000/denom)/100;
     }
 
 

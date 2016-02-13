@@ -6,44 +6,57 @@
   </head>
   <body ng-controller='control'>
 
-    <div ng-repeat='section in storage'>
+    <div>
+      <div id='title'>Grade Calculator</div>
+    </div>
+
+    <div class='container'>
+
+      <div ng-repeat='section in storage'>
+        <div class='section'>
+
+          <div class='itemSection'>
+
+            <div class='item' ng-repeat='item in section.data'>
+              <button ng-click='delete(section, $index)'>x</button>
+              <span>{{item[0]}} / {{item[1]}}</span>
+            </div>
+
+            <div class='item'>
+              <input ng-model='num' type='number' class='input'></input>
+              <input ng-model='denom' type='number' class='input'></input>
+              <input ng-model='future' type='checkbox'>Future Item</input>
+              <button ng-click='addItem($index, num, denom)'>Add Item</button>
+            </div>
+            <div class='itemEnd'></div>
+
+          </div>
+          
+          <div class='totalSection'>
+            <div class='item total'>
+              <div>{{section.total[0]}} / {{section.total[1]}}</div>
+              <div>{{section.totalPercent}}%</div>
+            </div>
+          </div>
+
+          <button class='sectionButton' ng-click='deleteSection($index)'>x</button>
+        </div>
+      </div>
+
+
       <div class='section'>
-        <button ng-click='deleteSection($index)'>x</button>
+        <button ng-click='addSection()'>Add Section</button>
 
-        <div class='inside'>
-
-          <div class='item' ng-repeat='item in section.data'>
-            <button ng-click='delete(section, $index)'>x</button>
-            <span>{{item[0]}} / {{item[1]}}</span>
-          </div>
-
+        <div class='totalSection'>
           <div class='item'>
-            <input ng-model='num' type='number' class='input'></input>
-            <input ng-model='denom' type='number' class='input'></input>
-            <button ng-click='addItem($index, num, denom)'>Add Item</button>
+            <div>{{final.total[0]}} / {{final.total[1]}}</div>
+            <div>{{final.totalPercent}}%</div>
           </div>
-          <div class='itemEnd'></div>
-
-        </div>
-        
-        <div class='inside'>
-          <div class='item'>
-            <div>{{section.total[0]}} / {{section.total[1]}}</div>
-            <div>{{section.totalPercent}}%</div>
-          </div>
-        </div>
+        </div> 
 
       </div>
-    </div>
 
 
-    <div class='section'>
-      <button ng-click='addSection()'>Add Section</button>
-    </div>
-
-    <div class='item'>
-      <div>{{final.total[0]}} / {{final.total[1]}}</div>
-      <div>{{final.totalPercent}}%</div>
     </div>
 
     <script src="app.js"></script>
