@@ -1,10 +1,28 @@
+span {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+}
+span.num {
+  border-bottom: solid 1px black;
+}
+
 .item {
-  border: solid 1px black;
-  margin: 2px;
-  width: 100px;
+  border: solid 1px lightgrey;
+  width: 70px;
   height: 100px;
   float: left;
   display : inline-block;
+  position: relative;
+  margin: 2px;
+  padding :2px;
+  background-color: Azure;
+}
+
+.itemButton {
+  position: absolute;
+  right :0px;
+  top:0px;
 }
 
 .itemEnd {
@@ -12,37 +30,54 @@
 }
 
 .itemSection {
-  margin-right: 100px;
+  margin-right: 80px;
   width : 600px;
-  margin :2px;
 }
 
 .totalSection {
   display :inline-block;
   position :absolute;
+  margin:2px;
   right : 0px;
   top : 0px;
-  width : 100px;
+  width : 80px;
 }
 
 .section {
   display: block;
-  margin : 2px;
   width : 700px;
   position: relative;
+  margin: 2px;
+  padding :2px;
   margin-left: auto;
   margin-right: auto;
-  background-color: lightgrey;
+  background-color: AliceBlue;
+}
+
+.bottomSection {
+  display: block;
+  width : 700px;
+  position: relative;
+  margin: 2px;
+  padding :2px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sectionButton {
   position: absolute;
-  right :0px;
-  top:0px;
+  right : -5px;
+  top: 0px;
+}
+
+.inputContainer {
 }
 
 .input {
   width : 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
@@ -56,4 +91,9 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.fractionDisplay {
+  margin: 0 auto;
+  margin-top: 15px;
 }

@@ -7,7 +7,7 @@ angular.module('app',[])
     };
 
     $scope.storage = [
-        {data : [],
+        {data : [[4,5],[99,100]],
         total: [0,0],
         totalPercent : 0}
       ];
