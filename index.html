@@ -8,6 +8,8 @@
 
     <div>
       <div id='title'>Grade Calculator</div>
+      <br>
+      <div id='message'>{{message}}</div>
     </div>
 
     <div class='container'>
@@ -26,8 +28,8 @@
 
             <div class='item'>
               <div class='inputContainer'>
-                <input ng-model='num' type='number' class='input'></input>
-                <input ng-model='denom' type='number' class='input'></input>
+                <input ng-model='num' class='input'></input>
+                <input ng-model='denom' class='input'></input>
               </div>
               <!-- <input ng-model='future' type='checkbox'>Future Item</input> -->
               <button ng-click='addItem($index, num, denom)'>Add Item</button>

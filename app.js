@@ -12,6 +12,8 @@ angular.module('app',[])
         totalPercent : 0}
       ];
 
+    $scope.message = 'Testing'
+
     $scope.addItem = function (index, num, denom) {
       $scope.storage[index].data.push([num, denom]);
       $scope.recalcTotal();
