@@ -10,6 +10,8 @@
       <div id='title'>Grade Calculator</div>
       <br>
       <div id='message'>{{message}}</div>
+      <div>{{storage}}</div>
+      <div>{{final}}</div>
     </div>
 
     <div class='container'>
@@ -23,16 +25,24 @@
                 <span class='num'>{{item[0]}}</span>
                 <span>{{item[1]}}</span>
               </div>
-              <button ng-click='delete(section, $index)' class='itemButton'>x</button>
+              <button ng-click='delete(section, $index, false)' class='itemButton'>x</button>
+            </div>
+
+            <div class='item' ng-repeat='item in section.future track by $index'>
+              <div class='fractionDisplay'>
+                <span class='num'>?</span>
+                <span>{{item}}</span>
+              </div>
+              <button ng-click='delete(section, $index, true)' class='itemButton'>x</button>
             </div>
 
             <div class='item'>
               <div class='inputContainer'>
-                <input ng-model='num' class='input'></input>
-                <input ng-model='denom' class='input'></input>
+                <input ng-model='num' type='number' min='0' class='input'></input>
+                <input ng-model='denom' type='number' min='1' class='input'></input>
+                <input ng-model='future' type='checkbox'><span class='smallText'>Future</span></input>
+                <button ng-click='addItem($index, num, denom, future)'>Add Item</button>
               </div>
-              <!-- <input ng-model='future' type='checkbox'>Future Item</input> -->
-              <button ng-click='addItem($index, num, denom)'>Add Item</button>
             </div>
             <div class='itemEnd'></div>
           </div>
@@ -52,6 +62,10 @@
       <div class='bottomSection'>
         <button ng-click='addSection()'>Add Section</button>
 
+        <div>
+          <div> You need to get a {{final.percentNeeded}}% average on your remaining items to get a <input ng-model='final.projected' type='number'></input> percent in the class
+          </div>
+        </div>
         <div class='totalSection'>
           <div class='item'>
             <div>{{final.total[0]}} / {{final.total[1]}}</div>
